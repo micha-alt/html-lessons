@@ -1,2 +1,5 @@
+# Node Package Manager modules
+node_modules/
+
 # IDEs project settings
 .idea/

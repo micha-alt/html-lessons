@@ -6,5 +6,8 @@
   "repository": "",
   "author": "Michael Alt <mail@michael-alt.info>",
   "license": "MIT",
-  "readmeFilename": "readme.md"
+  "readmeFilename": "readme.md",
+  "dependencies": {
+    "express": "~3.2.0"
+  }
 }
