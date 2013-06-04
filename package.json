@@ -1,0 +1,10 @@
+{
+  "name": "HtmlLessons",
+  "version": "0.0.1",
+  "description": "Schulung",
+  "main": "index.html",
+  "repository": "",
+  "author": "Michael Alt <mail@michael-alt.info>",
+  "license": "MIT",
+  "readmeFilename": "readme.md"
+}
