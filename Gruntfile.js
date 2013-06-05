@@ -42,7 +42,16 @@ module.exports = function(grunt) {
         jade: {
             compile: {
                 options: {
-                    pretty: true
+                    pretty: true,
+                    data: function(dest,src) {
+                        var data = { path: ''};
+                        var fname = src.toString();
+                        fname = fname.replace(this.cwd+'/','');
+                        if( fname !== 'index.jade') {
+                            data.path = '../';
+                        }
+                        return data;
+                    }
                 },
                 files: [ {
                     expand: true,
