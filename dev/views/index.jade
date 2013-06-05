@@ -1,10 +1,19 @@
 extends ../layout/base
 
 block main
+    section#intro
+        .splash.clearing-container
+            .logo
+                img(src='/img/html5-logo.svg')
+            .teaser
+                h1 Grundlagen der Web-Techniken
+                p
+                    | Eine Einführung in die Building Blocks der Webseitenerstellung: HTML, CSS und JavaScript.
+                a.large.button.radius(href='/01_intro/') Los geht's!
     div.row.full-width
-        div.large-10.columns
+        div.large-12.columns
             h2 Inhalte
-            dl.content
+            dl#content
                 dt
                     a(href='01_intro/') Einführung
                 dd
@@ -14,41 +23,54 @@ block main
                 dd
                     | Entwicklung der Auszeichungssprachen
                 dt
-                    a(href='03_rules/') Allgemeine Regeln der HTML-Programmierung
+                    a(href='03_rules/') Einführung HTML
                 dd
+                    | Allgemeine Regeln der HTML-Programmierung
                 dt
-                    a(href='04_elements/') HTML-Elemente einsetzen: Absätze, Überschriften, Listen, Grafiken, Hyperlinks und Tabellen
+                    a(href='04_elements/') Basis Elemente
                 dd
+                    | HTML-Elemente einsetzen: Absätze, Überschriften, Listen, Grafiken, Hyperlinks und Tabellen
                 dt
-                    a(href='05_pics_and_colors') Bildformate und Farben für das Web
+                    a(href='05_pics_and_colors') Formate
                 dd
+                    | Bildformate und Farben für das Web
                 dt
-                    a(href='06_pics_and_text') Grafiken einbinden und von Text umfließen lassen
+                    a(href='06_pics_and_text') Grafiken einbinden
                 dd
+                    | Grafiken einbinden und von Text umfließen lassen
                 dt
-                    a(href='07_hyperlinks') Text und Grafiken als Hyperlink
+                    a(href='07_hyperlinks') Hyperlinks
                 dd
+                    | Text und Grafiken als Hyperlink
                 dt
-                    a(href='08_tables') Aufbau von Tabellen und deren Einsatzmöglichkeiten
+                    a(href='08_tables') Tabellen
                 dd
+                    | Aufbau von Tabellen und deren Einsatzmöglichkeiten
                 dt
-                    a(href='09_stylesheets_and_scripts') HTML-Elemente für Style-Sheet- und Scriptbereiche
+                    a(href='09_stylesheets_and_scripts') Einbindung CSS/JavaScript
                 dd
+                    | HTML-Elemente für Style-Sheet- und Scriptbereiche
                 dt
-                    a(href='10_css_intro') Einführung in Cascading Style Sheets
+                    a(href='10_css_intro') Grundlagen CSS
                 dd
+                    | Einführung in Cascading Style Sheets
                 dt
-                    a(href='11_styling') Seiten formatieren mit CSS
+                    a(href='11_styling') Layout mit CSS
                 dd
+                    | Seiten formatieren mit CSS
                 dt
-                    a(href='12_browsers') Unterschiede der einzelnen Browser
+                    a(href='12_browsers') Browser-Unterstützung
                 dd
+                    | Unterschiede der einzelnen Browser
                 dt
-                    a(href='13_html5') Neuerungen in HTML5
+                    a(href='13_html5') HTML5
                 dd
+                    | Neuerungen in HTML5
                 dt
-                    a(href='14_legal_foundations') Rechtsgrundlagen (Urheberrecht, Impressumspflicht, Datenschutz etc.)
+                    a(href='14_legal_foundations') Rechtsgrundlagen
                 dd
+                    | Rechtsgrundlagen (Urheberrecht, Impressumspflicht, Datenschutz etc.)
                 dt
                     a(href='15_tips_tricks') Tipps und Tricks
                 dd
+                    | Hilfreiches und Links

@@ -1,0 +1,40 @@
+/*****
+ * Foundation fixes
+ */
+.top-bar {
+  margin-bottom: 0; }
+
+footer {
+  color: #ffffff;
+  background-color: #313131;
+  padding: 11px 0;
+  margin-top: 30px; }
+  footer ul {
+    margin-bottom: 0 !important; }
+
+#intro {
+  padding: 2em 0;
+  background-color: #eeeeee;
+  margin: 0 auto 2em; }
+  #intro .splash {
+    width: 80%;
+    margin: 0 auto; }
+  #intro .logo {
+    float: left;
+    width: 30%; }
+  #intro .teaser {
+    margin-left: 35%; }
+  #intro .teaser p {
+    font-size: 1.6em; }
+
+#content {
+  counter-reset: ix-counter; }
+  #content dt:before {
+    content: counter(ix-counter, decimal-leading-zero);
+    counter-increment: ix-counter;
+    margin-right: 12px;
+    font-size: 1.6em; }
+  #content dt {
+    font-size: 1.2em; }
+  #content dd {
+    margin-left: 12px; }
