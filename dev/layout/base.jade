@@ -11,58 +11,37 @@ html(lang='de')
             nav.top-bar
                 ul.title-area
                     li.name
-                        h1
-                            a(href='/') HTML Schulung
-                    li.toggle-topbar.menu-icon
-                        a(href='#')
-                            span
+                        h1: a(href='/') HTML Schulung
+                    li.toggle-topbar.menu-icon: a(href='#'): span
                 section.top-bar-section
                     ul.right
                         li.divider.hide-for-small
-                        li
-                            a(href='/') Home
+                        li: a(href='/') Home
                         li.divider
                         li.has-dropdown
                             a(href='#') Inhalt
                             ul.dropdown
-                                li
-                                    label Intro
-                                li
-                                    a(href='/01_intro/') Einführung
-                                li
-                                    a(href='/02_history/') Geschichte
-                                li
-                                    label HTML Grundlagen
-                                li
-                                    a(href='/03_rules/') Allgemeines
-                                li
-                                    a(href='/04_elements/') Basis Elemente
-                                li
-                                    a(href='/05_pics_and_colors') Formate
-                                li
-                                    a(href='/06_pics_and_text') Grafiken einbinden
-                                li
-                                    a(href='/07_hyperlinks') Hyerlinks
-                                li
-                                    a(href='/08_tables') Tabellen
-                                li
-                                    label CSS/JavaScript
-                                li
-                                    a(href='/09_stylesheets_and_scripts') Einbindung
-                                li
-                                    a(href='/10_css_intro') Grundlagen CSS
-                                li
-                                    a(href='/11_styling') Layout mit CSS
-                                li
-                                    label Sonstiges
-                                li
-                                    a(href='/12_browsers') Browser-Unterschiede
-                                li
-                                    a(href='/13_html5') HTML5
-                                li
-                                    a(href='/14_legal_foundations') Rechtsgrundlagen
-                                li
-                                    a(href='/15_tips_tricks') Tipps und Tricks
+                                li: label Intro
+                                li: a(href='/01_intro/') Einführung
+                                li: a(href='/02_history/') Geschichte
+                                li: label HTML Grundlagen
+                                li: a(href='/03_rules/') Allgemeines
+                                li: a(href='/04_elements/') Basis Elemente
+                                li: a(href='/05_pics_and_colors') Formate
+                                li: a(href='/06_pics_and_text') Grafiken einbinden
+                                li: a(href='/07_hyperlinks') Hyerlinks
+                                li: a(href='/08_tables') Tabellen
+                                li: label CSS/JavaScript
+                                li: a(href='/09_stylesheets_and_scripts') Einbindung
+                                li: a(href='/10_css_intro') Grundlagen CSS
+                                li: a(href='/11_styling') Layout mit CSS
+                                li: label Sonstiges
+                                li: a(href='/12_browsers') Browser-Unterschiede
+                                li: a(href='/13_html5') HTML5
+                                li: a(href='/14_legal_foundations') Rechtsgrundlagen
+                                li: a(href='/15_tips_tricks') Tipps und Tricks
+                        li.divider
+                        li: a(href='https://github.com/micha-alt/html-lessons') Download
 
         main
             block main

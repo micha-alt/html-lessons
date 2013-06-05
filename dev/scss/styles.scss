@@ -5,7 +5,9 @@
 .top-bar {
   margin-bottom: 0;
 }
-
+.top-bar-section .dropdown {
+  z-index: 1000;
+}
 footer {
   color: #ffffff;
   background-color: #313131;
