@@ -10,9 +10,15 @@ module.exports = function(grunt) {
                 options: {
                     pretty: true
                 },
-                files: {
-                    "www/index.html": ["dev/views/index.jade"]
-                }
+                files: [ {
+                    expand: true,
+                    src: "**/*.jade",
+                    dest: "www/",
+                    cwd: "dev/views" ,
+                    rename: function(destBase, destPath) {
+                        return destBase + destPath.replace(/\.jade$/, '.html')
+                    }
+                } ]
             }
         }
     });
