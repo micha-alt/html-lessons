@@ -2,22 +2,120 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <title>HTML5 Schulung</title>
+    <title>HTML Schulung</title>
     <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/foundation.css">
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
     <header>
-      <h1>HTML5 Schulung</h1>
+      <nav class="top-bar">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="/">HTML Schulung</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="divider hide-for-small"></li>
+            <li><a href="/">Home</a></li>
+            <li class="divider"></li>
+            <li class="has-dropdown"><a href="#">Inhalt</a>
+              <ul class="dropdown">
+                <li>
+                  <label>Intro</label>
+                </li>
+                <li><a href="/01_intro/">Einführung</a></li>
+                <li><a href="/02_history/">Geschichte</a></li>
+                <li>
+                  <label>HTML Grundlagen</label>
+                </li>
+                <li><a href="/03_rules/">Allgemeines</a></li>
+                <li><a href="/04_elements/">Basis Elemente</a></li>
+                <li><a href="/05_pics_and_colors">Formate</a></li>
+                <li><a href="/06_pics_and_text">Grafiken einbinden</a></li>
+                <li><a href="/07_hyperlinks">Hyerlinks</a></li>
+                <li><a href="/08_tables">Tabellen</a></li>
+                <li>
+                  <label>CSS/JavaScript</label>
+                </li>
+                <li><a href="/09_stylesheets_and_scripts">Einbindung</a></li>
+                <li><a href="/10_css_intro">Grundlagen CSS</a></li>
+                <li><a href="/11_styling">Layout mit CSS</a></li>
+                <li>
+                  <label>Sonstiges</label>
+                </li>
+                <li><a href="/12_browsers">Browser-Unterschiede</a></li>
+                <li><a href="/13_html5">HTML5</a></li>
+                <li><a href="/14_legal_foundations">Rechtsgrundlagen</a></li>
+                <li><a href="/15_tips_tricks">Tipps und Tricks</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>
     </header>
     <main>
-      <h2>Inhalte</h2>
-      <ul>
-        <li><a href="01_intro/">Einführung</a></li>
-        <li>HTML - das Markup</li>
-        <li>CSS - das Styling</li>
-        <li>JavaScript - der Code</li>
-      </ul>
+      <div class="row full-width">
+        <div class="large-10 columns">
+          <h2>Inhalte</h2>
+          <dl class="content">
+            <dt><a href="01_intro/">Einführung</a></dt>
+            <dd>Ein paar Worte über mich und eine kleine Demonstration der Themen, über die wir reden.</dd>
+            <dt><a href="02_history/">Geschichte</a></dt>
+            <dd>Entwicklung der Auszeichungssprachen</dd>
+            <dt><a href="03_rules/">Allgemeine Regeln der HTML-Programmierung</a></dt>
+            <dd></dd>
+            <dt><a href="04_elements/">HTML-Elemente einsetzen: Absätze, Überschriften, Listen, Grafiken, Hyperlinks und Tabellen</a></dt>
+            <dd></dd>
+            <dt><a href="05_pics_and_colors">Bildformate und Farben für das Web</a></dt>
+            <dd></dd>
+            <dt><a href="06_pics_and_text">Grafiken einbinden und von Text umfließen lassen</a></dt>
+            <dd></dd>
+            <dt><a href="07_hyperlinks">Text und Grafiken als Hyperlink</a></dt>
+            <dd></dd>
+            <dt><a href="08_tables">Aufbau von Tabellen und deren Einsatzmöglichkeiten</a></dt>
+            <dd></dd>
+            <dt><a href="09_stylesheets_and_scripts">HTML-Elemente für Style-Sheet- und Scriptbereiche</a></dt>
+            <dd></dd>
+            <dt><a href="10_css_intro">Einführung in Cascading Style Sheets</a></dt>
+            <dd></dd>
+            <dt><a href="11_styling">Seiten formatieren mit CSS</a></dt>
+            <dd></dd>
+            <dt><a href="12_browsers">Unterschiede der einzelnen Browser</a></dt>
+            <dd></dd>
+            <dt><a href="13_html5">Neuerungen in HTML5</a></dt>
+            <dd></dd>
+            <dt><a href="14_legal_foundations">Rechtsgrundlagen (Urheberrecht, Impressumspflicht, Datenschutz etc.)</a></dt>
+            <dd></dd>
+            <dt><a href="15_tips_tricks">Tipps und Tricks</a></dt>
+            <dd></dd>
+          </dl>
+        </div>
+      </div>
     </main>
-    <footer>&copy; Michael Alt (mail@michael-alt.info), 2013</footer>
+    <footer>
+      <div class="row full-width">
+        <div class="large-12 columns">
+          <ul class="inline-list right">
+            <li><span>Built with:</span></li>
+            <li><a href="http://gruntjs.com">Grunt.js</a></li>
+            <li><a href="http://bower.io">Twitter Bower</a></li>
+            <li><a href="http://sass-lang.com">Sass</a></li>
+            <li><a href="http://necolas.github.io/normalize.css/">Normalize.css</a></li>
+            <li><a href="http://foundation.zurb.com">Zurb Foundation</a></li>
+            <li><a href="http://nodejs.org">Node.js</a></li>
+            <li><a href="http://expressjs.com">Express</a></li>
+            <li><a href="http://jade-lang.com">Jade Templates</a></li>
+            <li><a href="http://jquery.com">jQuery</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/foundation.plugins.min.js"></script>
+    <script>$(document).foundation();</script>
   </body>
 </html>
