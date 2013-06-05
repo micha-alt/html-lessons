@@ -19,12 +19,18 @@ app.use('/img',express.static(pub+'/img'));
 
 app.set('views',views);
 app.set('view engine', 'jade');
+app.engine('.html',require('jade').__express);
 app.locals.pretty = true;
 
 // homepage
 app.get('/',function(req,res){
     "use strict";
-    res.render('index');
+    res.render('index.html');
+});
+
+app.use(function(req, res){
+    "use strict";
+    res.render(req.url.replace(/^\//,''));
 });
 
 app.listen(5000);
