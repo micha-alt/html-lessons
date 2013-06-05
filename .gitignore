@@ -4,5 +4,8 @@ node_modules/
 # Bower packages
 components/
 
+# Sass cache
+.sass-cache/
+
 # IDEs project settings
 .idea/
