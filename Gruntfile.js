@@ -84,14 +84,6 @@ module.exports = function(grunt) {
                 files: ['dev/scss/**'],
                 tasks: ['sass:development']
             }
-        },
-        connect: {
-            server: {
-                options: {
-                    port: 8080,
-                    base: './www'
-                }
-            }
         }
     });
 
@@ -100,7 +92,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-connect');
 
     grunt.registerTask('bower-install', 'Installs Bower dependencies.', function () {
         var bower = require('bower'),
@@ -110,9 +101,13 @@ module.exports = function(grunt) {
             .on('data', function (data) { grunt.log.write(data); })
             .on('end', done);
     });
+    grunt.registerTask('server', 'Start a presentation web server', function() {
+        grunt.log.writeln('Starting presentation web server');
+        require('./server.js');
+    });
 
     grunt.registerTask('setup', ['bower-install','copy:install', 'uglify:install', 'sass:install']);
-    grunt.registerTask('develop', ['default', 'connect', 'watch']);
+    grunt.registerTask('develop', ['default', 'server', 'watch']);
     grunt.registerTask('default', ['sass:development', 'jade']);
 
 };

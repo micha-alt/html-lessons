@@ -4,11 +4,12 @@ Grundlagen der Web-Techniken - Eine Einführung in die Building Blocks der Webse
 
 - Viewing:
 
-    Einfach den Zip-Tarball runterladen, entpacken und die www/index.html öffnen. Alternativ lässt
-    sich die Präsentation auch über Node.js/Express starten oder auf einen Web-Server deployen.
+    Einfach den Zip-Tarball runterladen, entpacken und die Node-Module installieren (`npm install`). Dann lässt sich
+    der Präsentationsserver mit `grunt server watch` starten. Alternativ lässt sich die Präsentation auch
+    auf einen Web-Server deployen (Rootdir: `www/`).
 
 - Editing:
 
-    Node-Module installieren (npm install), Abhängikeiten installieren (grunt setup), Source-Files unter
-    dev/ editieren und neu bauen lassen (grunt default). Oder die Source-Files überwachen lassen (grunt develop) -
-    hierbei wird wieder ein Node.js/Connect-Server gestartet.
+    Node-Module installieren (`npm install`), Abhängikeiten installieren (`grunt setup`), Source-Files unter
+    dev/ editieren und neu bauen lassen (`grunt default`). Oder die Source-Files überwachen lassen (`grunt develop`) -
+    hierbei wird wieder ein Node.js Server gestartet.
