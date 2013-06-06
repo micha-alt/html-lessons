@@ -53,15 +53,26 @@ module.exports = function(grunt) {
                         return data;
                     }
                 },
-                files: [ {
-                    expand: true,
-                    src: "**/*.jade",
-                    dest: "www/",
-                    cwd: "dev/views" ,
-                    rename: function(destBase, destPath) {
-                        return destBase + destPath.replace(/\.jade$/, '.html')
+                files: [
+                    {
+                        expand: true,
+                        src: "**/*.jade",
+                        dest: "www/",
+                        cwd: "dev/views" ,
+                        rename: function(destBase, destPath) {
+                            return destBase + destPath.replace(/\.jade$/, '.html')
+                        }
+                    },
+                    {
+                        expand: true,
+                        src: "**/*.jade",
+                        dest: "www/pik7/presentations/",
+                        cwd: "dev/presentations" ,
+                        rename: function(destBase, destPath) {
+                            return destBase + destPath.replace(/\.jade$/, '.html')
+                        }
                     }
-                } ]
+                ]
             }
         },
         watch: {
