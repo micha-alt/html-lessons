@@ -1,0 +1,97 @@
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+html,body{background:#fff;height:100%;width:100%;margin:0;padding:0;}
+@media only screen{html,body{overflow:hidden;position:relative}
+}@font-face{font-family:'icons';src:url("icons/icons.eot");src:url("icons/icons.eot?#iefix") format('embedded-opentype'),url("icons/icons.woff") format('woff'),url("icons/icons.ttf") format('truetype'),url("icons/icons.svg#icons") format('svg');font-weight:normal;font-style:normal}
+[class^='icon']:before,#PikPresenterApp #PikCountdownControl:before{font-family:icons;font-style:normal;font-weight:normal;speak:none}
+.iconMenu:before{content:'\2630';}
+.iconHome:before{content:'\2302';}
+.iconView:before{content:'\e70a';}
+.iconFolder:before{content:'\1f4c1';}
+.iconReload:before{content:'\27f3';}
+.iconPrint:before{content:'\e716';}
+.iconClone:before{content:'\e736';}
+.iconPresenter:before{content:'\e74e';}
+.iconCog:before{content:'\2699';}
+.iconGithub:before{content:'\f300';}
+.iconPlay:before,#PikPresenterApp #PikCountdownControl.paused:before{content:'\25b6';}
+.iconPause:before,#PikPresenterApp #PikCountdownControl:before{content:'\2389';}
+.iconFullscreen:before{content:'\e74e';}
+@media print{#PikSlideWrapper{font-size:12pt !important;width:100% !important;color:#000;background:#fff}
+.pikNoprint,.pikNotes{display:none !important;page-break-after:auto !important}
+h1,h2,h3,h4,h5,h6{clear:both;}
+h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child{margin-top:0}
+pre{line-height:1.2}
+input,textarea,iframe{-webkit-print-color-adjust:exact}
+a{color:#00f;word-wrap:break-word;}
+a:not(.url)[href^="http"]::after{content:" (" attr(href) ")";font-size:55%}
+.pikSlide.center > img:only-child{display:block;margin:0 auto}
+}@media print and (orientation:landscape){#PikSlideWrapper{font-size:21pt !important}
+#PikSlides .pikSlide{page-break-inside:avoid;page-break-after:always}
+img[width="100%"]{width:75%;display:block;margin:0 auto}
+}@media print and (orientation:portrait){#PikSlides .pikSlide{margin-bottom:3em}
+}@media only screen{#PikSlides #PikSlideWrapper{margin-left:auto;margin-right:auto;position:relative;height:100%}
+#PikSlides .pikSlide,#PikSlides #PikHide{visibility:hidden;position:absolute;top:0;left:0;height:100%;width:100%}
+#PikSlides #PikHide{background:#000;z-index:1000000000000000000}
+#PikSlides .pikSlide.pikCurrent{visibility:visible}
+#PikSlides #PikHide.pikActive{visibility:visible}
+#PikSlides .pikNotes{display:none}
+#PikSlides.pikInPresenter:not(.pikOnlyNotes):not(.pikNoNotes) .pikNotes{text-align:left;display:block;background:rgba(0,0,0,0.75);color:#fff;font-size:.6em;position:absolute;bottom:0;left:0;right:0;padding:.5em 1.5em;-webkit-transition:opacity 750ms;-moz-transition:opacity 750ms;-o-transition:opacity 750ms;-ms-transition:opacity 750ms;transition:opacity 750ms;}
+#PikSlides.pikInPresenter:not(.pikOnlyNotes):not(.pikNoNotes) .pikNotes:hover{opacity:0;filter:alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}
+#PikSlides.pikInPresenter #PikHide{opacity:.6;filter:alpha(opacity=60);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"}
+#PikSlides.pikOnlyNotes .pikSlide > :not(.pikNotes){display:none}
+#PikSlides.pikOnlyNotes .pikNotes{display:block !important}
+}#PikApp iframe{display:block;border:none;height:100%;width:100%;position:absolute;top:0;left:0;right:0;bottom:0;margin:0;padding:0}
+#PikApp #PikControlsContainer{position:absolute;bottom:0;right:0;padding:.85em 1.25em 1.25em 2em;margin:0;cursor:pointer;}
+#PikApp #PikControlsContainer.open{cursor:default}
+#PikApp #PikControls{background:rgba(0,0,0,0.95);-webkit-border-radius:.5em;border-radius:.5em;font-family:Arial,sans-serif;line-height:1.25;font-size:16px;color:#fff;font-weight:bold;margin:0;padding:1.2em 1.6em .9em 1.6em;opacity:.3;filter:alpha(opacity=30);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";-webkit-transition:opacity 400ms;-moz-transition:opacity 400ms;-o-transition:opacity 400ms;-ms-transition:opacity 400ms;transition:opacity 400ms}
+#PikApp #PikControlsContainer.open #PikControls{opacity:1;-ms-filter:none;filter:none}
+#PikApp #PikControlsLinks,#PikApp #PikControlsContainer.open #PikControlsTitle{display:none}
+#PikApp #PikControlsContainer.open #PikControlsLinks,#PikApp #PikControlsTitle{display:inline}
+#PikApp a{text-decoration:none;-webkit-transition:color 400ms;-moz-transition:color 400ms;-o-transition:color 400ms;-ms-transition:color 400ms;transition:color 400ms;}
+#PikApp a:not(:last-child){margin-right:1.25em}
+#PikApp a:first-child{margin-right:.55em}
+#PikApp a:link,#PikApp a:visited{color:#aaa}
+#PikApp a:hover{color:#fff}
+#PikApp a:active{color:#f00}
+#PikApp [class^='icon']:before{margin-right:.5em;position:relative;top:-1px}
+#PikApp #PikControlsTitle:before{margin:0}
+#PikPresenterApp body{font-family:Arial,sans-serif;line-height:1.25;color:#000}
+#PikPresenterApp #PikPresenterAppWrapper{position:relative;margin-left:auto;margin-right:auto}
+#PikPresenterApp input,#PikPresenterApp select{font-size:inherit}
+#PikPresenterApp iframe{display:block;border:none;margin:0;-webkit-box-shadow:0 0 1.25em -.2em rgba(0,0,0,0.65);box-shadow:0 0 1.25em -.2em rgba(0,0,0,0.65);background:#fff;position:absolute;}
+#PikPresenterApp iframe:hover{z-index:1337}
+#PikPresenterApp #PikFrame{left:0}
+#PikPresenterApp #PikFramePreview{right:0}
+#PikPresenterApp #PikCounterContainer{font-size:35%;text-align:right;position:absolute;top:11%;right:0;width:25%;height:15%}
+#PikPresenterApp #PikSlideCounter,#PikPresenterApp #PikTimer{display:block}
+#PikPresenterApp #PikSlideCounter{font-weight:bold;font-size:3.5em}
+#PikPresenterApp #PikTimeCountdown{font-weight:bold;font-size:1.5em}
+#PikPresenterApp #PikTimeCurrent{font-size:1.25em}
+#PikPresenterApp #PikCountdownControl{font-size:1.5em;text-decoration:none;color:#000;opacity:.35;filter:alpha(opacity=35);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";overflow:hidden;margin-right:.25em;}
+#PikPresenterApp #PikCountdownControl:hover{opacity:1;-ms-filter:none;filter:none}
+#PikPresenterApp #PikCountdownControl span{display:inline-block;height:0;width:0;overflow:hidden}
+#PikPresenterApp a.pikFullScreen{position:absolute;cursor:pointer;cursor:pointer;margin-left:.5em;text-decoration:none;border-bottom-width:.1em;border-bottom-style:solid;border-bottom-color:currentcolor;border:none !important}
+#PikPresenterApp a.pikFullScreen:link,#PikPresenterApp a.pikFullScreen:visited{color:inherit;border-bottom-color:currentcolor}
+#PikPresenterApp a.pikFullScreen:hover{color:inherit;border-bottom-color:transparent}
+#PikPresenterApp a.pikFullScreen:active{color:#c00;border-bottom-color:transparent}
+#PikPresenterApp a.pikFullScreen:before{margin-right:.25em}
+#PikPresenterApp #PikFullScreenMain{left:2.5%;bottom:15%;}
+#PikPresenterApp #PikFullScreenMain:before{content:"← \e74e"}
+#PikPresenterApp #PikFullScreenPreview{left:5%;bottom:-10%;}
+#PikPresenterApp #PikFullScreenPreview:after{content:" ↓"}
+#PikPresenterApp #PikControlsContainer{font-size:35%;text-align:right;position:absolute;bottom:10%;right:0;width:100%;}
+#PikPresenterApp #PikControlsContainer p{margin:1.25em 0}
+#PikPresenterApp #PikControlsContainer select{width:22.5%}
+#PikPresenterApp #PikControlsContainer a{cursor:pointer;margin-left:.5em;text-decoration:none;border-bottom-width:.1em;border-bottom-style:solid;border-bottom-color:currentcolor;}
+#PikPresenterApp #PikControlsContainer a:link,#PikPresenterApp #PikControlsContainer a:visited{color:inherit;border-bottom-color:currentcolor}
+#PikPresenterApp #PikControlsContainer a:hover{color:inherit;border-bottom-color:transparent}
+#PikPresenterApp #PikControlsContainer a:active{color:#c00;border-bottom-color:transparent}
+#PikPresenterApp #PikControlsContainer a:before{margin-right:.25em}
+#PikPresenterApp #PikPresenterOptions{font-size:.45em;background:#fff;-webkit-box-shadow:0 0 2em -.25em rgba(0,0,0,0.6);box-shadow:0 0 2em -.25em rgba(0,0,0,0.6);display:table;position:absolute;z-index:9000;width:80%;left:10%;padding:1em 2em;}
+#PikPresenterApp #PikPresenterOptions h1{font-size:1.4em}
+#PikPresenterApp #PikPresenterOptions h2{font-size:1.1em}
+#PikPresenterApp #PikPresenterOptions input[type=number]{max-width:20%}
+#PikPresenterApp #PikPresenterOptions #PikOptionsClose{margin-top:2.5em;text-align:right;}
+#PikPresenterApp #PikPresenterOptions #PikOptionsClose input{font-weight:bold;cursor:pointer}
+#PikPresenterApp #PikPresenterOptionsOverlay{position:absolute;z-index:8999;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.75)}
+#PikPresenterApp #PikPresenterOptions:not(.open),#PikPresenterApp #PikPresenterOptionsOverlay:not(.open){display:none}
