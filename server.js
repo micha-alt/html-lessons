@@ -21,7 +21,9 @@ listDirectory = function(request, response) {
     }
     result.forEach(function(file) {
       html += "<li>";
-      return html += "<a href=\"" + (encodeURI(request.url + '/' + file)) + "\">" + file + "</a>";
+      var presentationName = file.substr(0,2) + ' ' + file.substr(3,1).toUpperCase() + file.substr(4);
+
+      return html += "<a href=\"" + (encodeURI(request.url + '/' + file)) + "\">" + presentationName + "</a>";
     });
     html += '</ul>';
     response.writeHead(200, {
