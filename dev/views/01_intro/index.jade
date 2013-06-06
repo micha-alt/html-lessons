@@ -1,4 +1,16 @@
 extends ../../layout/base
 
+block title
+    title Einführung - HTML Schulung
+
 block main
-    h2 HTML - das Markup
+    section#intro
+        .splash
+            h2 Einführung
+            div.right
+                a.button.radius(href='01_intro/demo.html') Start
+            p
+                | Zum Einstieg - neben ein paar Worten zu mir - ein kleines Demo, dass die
+                | verschiedenen Techniken an einem einfachen Beispiel präsentiert.
+        #presentation.full-width.row
+            iframe(src='/pik7/presenter.html',seamless='',data-presentation='01_intro')

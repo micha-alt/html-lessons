@@ -1,5 +1,6 @@
 @import url("http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic");
-@media all{body{font-family:Ubuntu,Arial,sans-serif;line-height:1.425}
+@media all{
+    body{font-family:Ubuntu,Arial,sans-serif;line-height:1.425}
 small{font-size:.5em;display:block;color:rgba(68,68,68,0.8)}
 sub,sup{font-size:.65em}
 input,output,button,keygen{font-size:inherit}
@@ -23,7 +24,12 @@ iframe{display:none;border:none}
 mark span.pln,mark span.str,mark span.kwd,mark span.com,mark span.dec,mark span.typ,mark span.lit,mark span.pun,mark span.opn,mark span.clo,mark span.tag,mark span.atn,mark span.atv{color:#000}
 s{text-decoration:none;}
 s span.pln,s span.str,s span.kwd,s span.com,s span.dec,s span.typ,s span.lit,s span.pun,s span.opn,s span.clo,s span.tag,s span.atn,s span.atv{color:#aaa}
-}@media screen{body{background:#cfcfcf;color:#444}
+#PikSlides .pikSlide img {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+}
+@media screen{body{background:#cfcfcf;color:#444}
 #PikSlides .pikSlide{box-sizing:border-box;font-size:.85em;background:#fff;box-shadow:0 0 1.5em -.5em #999;width:96%;height:97%;margin:1% 2%;padding:.5em 1.5em;}
 #PikSlides .pikSlide:first-child{text-align:center}
 #PikSlides .pikSlide.invisible{background:transparent;box-shadow:none}

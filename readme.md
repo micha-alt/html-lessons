@@ -10,6 +10,6 @@ Grundlagen der Web-Techniken - Eine Einführung in die Building Blocks der Webse
 
 - Editing:
 
-    Node-Module installieren (`npm install`), Abhängikeiten installieren (`grunt setup`), Source-Files unter
-    dev/ editieren und neu bauen lassen (`grunt default`). Oder die Source-Files überwachen lassen (`grunt develop`) -
+    Node-Module installieren (`npm install`), Abhängigkeiten installieren (`grunt setup`), Source-Files unter
+    `dev/` editieren und neu bauen lassen (`grunt default`). Oder die Source-Files überwachen lassen (`grunt develop`) -
     hierbei wird wieder ein Node.js Server gestartet.
