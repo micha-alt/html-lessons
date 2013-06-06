@@ -11263,14 +11263,17 @@ StyleFix.register(self.prefixCSS);
 
 define("prefixfree", function(){});
 
-require(['almond', 'lib/polyfill/bind', 'app', 'presenterApp', 'ui/app', 'ui/presenterApp', 'slides', 'jquery', 'prefixfree'], function(_bind, _almond, App, PresenterApp, appUi, presenterAppUi, Slides) {
+require(['almond', 'lib/polyfill/bind', 'app', 'presenterApp', 'ui/app', 'ui/presenterApp', 'slides', 'lib/sync', 'jquery', 'prefixfree'], function(_bind, _almond, App, PresenterApp, appUi, presenterAppUi, Slides, Syncer) {
   var appDefaults, isApp, isPresenter, isSlides, presenterAppOptionDefaults;
+
+  // Default: browse presentations
   appDefaults = {
-    file: 'core/welcome.html',
+    file: 'presentations',
     slide: 0,
     hidden: false,
     numSlides: 1
   };
+
   presenterAppOptionDefaults = {
     mainFrameContent: 'currentSlide',
     secondaryFrameContent: 'nextSlide',
@@ -11286,7 +11289,22 @@ require(['almond', 'lib/polyfill/bind', 'app', 'presenterApp', 'ui/app', 'ui/pre
   if (isApp) {
     return appUi(new App(appDefaults));
   } else if (isPresenter) {
-    return presenterAppUi(new PresenterApp(appDefaults, presenterAppOptionDefaults));
+
+      // Check on parent frame
+      if( window.parent ) {
+          var parentDoc = window.parent.document;
+          // Look for data-presentation
+          var iframe = parentDoc.querySelector('iframe[data-presentation]');
+          if( iframe ) {
+              appDefaults.file = 'presentations/' + iframe.getAttribute('data-presentation');
+              // and change the storage
+              var s = new Syncer();
+              s.setState(appDefaults);
+
+          }
+      }
+
+      return presenterAppUi(new PresenterApp(appDefaults, presenterAppOptionDefaults));
   } else if (isSlides) {
     return new Slides();
   }

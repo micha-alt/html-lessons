@@ -30,6 +30,10 @@ footer {
   #intro .teaser p {
     font-size: 1.6em; }
 
+#presentation iframe {
+  width: 100%;
+  height: 480px; }
+
 #content {
   counter-reset: ix-counter; }
   #content dt:before {
