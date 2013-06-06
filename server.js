@@ -11,8 +11,8 @@ port = 8080;
 listDirectory = function(request, response) {
   var dir, html;
 
-  dir = path.relative('/', request.url);
-  html = "<!doctype html><meta charset=\"utf-8\">  <title>" + request.url + "</title><h1>" + request.url + "</h1><ul>";
+  dir = 'www/'+ path.relative('/', request.url);
+  html = "<!doctype html><meta charset=\"utf-8\">  <title>" + request.url + "</title><h1>Präsentationen</h1><ul>";
   return fs.readdir(dir, function(err, result) {
     if (err) {
       return endError(request, response, {
@@ -38,13 +38,16 @@ endError = function(request, response, err) {
   }
 };
 
-fileServer = new ns.Server('.');
+fileServer = new ns.Server('www');
 
 server = require('http').createServer(function(request, response) {
+
+  request.addListener('data', function() {});
+
   return request.addListener('end', function() {
     return fileServer.serve(request, response, function(err) {
       if (err) {
-        if (err.status === 404 && /^\/presentations/.test(request.url)) {
+        if (err.status === 404 && /^\/pik7\/presentations/.test(request.url)) {
           return listDirectory(request, response);
         } else {
           return endError(request, response, err);
@@ -56,4 +59,4 @@ server = require('http').createServer(function(request, response) {
 
 server.listen(port);
 
-console.log("\u001b[36m Info  - \u001b[mPik7 server running at\u001b[1mlocalhost:" + port + "\u001b[m");
+console.log("\u001b[36m Info  - \u001b[mPik7 server running at \u001b[1mlocalhost:" + port + "\u001b[m");
