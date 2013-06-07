@@ -11,6 +11,13 @@ module.exports = function(grunt) {
                     {expand: true, cwd: 'components/normalize-css', src: ['*.css'], dest: 'www/css/'},
                     {expand: true, cwd: 'components/jquery', src: ['jquery.*'], dest: 'www/js/'}
                 ]
+            },
+            development: {
+                files: [
+                    {
+                        expand: true, cwd: 'dev/js', src: ['*.js'], dest: 'www/js/'
+                    }
+                ]
             }
         },
         uglify: {
@@ -23,6 +30,13 @@ module.exports = function(grunt) {
                     {
                         src: ['components/foundation/js/foundation/foundation.*.js'],
                         dest: 'www/js/foundation.plugins.min.js'
+                    }
+                ]
+            },
+            development: {
+                files: [
+                    {
+                        expand: true, cwd: 'dev/js', src: ['*.js'], dest: 'www/js/'
                     }
                 ]
             }
@@ -83,6 +97,10 @@ module.exports = function(grunt) {
             less: {
                 files: ['dev/scss/**'],
                 tasks: ['sass:development']
+            },
+            js: {
+                files: ['dev/js/**'],
+                tasks: ['copy:development']
             }
         }
     });
@@ -108,6 +126,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('setup', ['bower-install','copy:install', 'uglify:install', 'sass:install']);
     grunt.registerTask('develop', ['default', 'server', 'watch']);
-    grunt.registerTask('default', ['sass:development', 'jade']);
+    grunt.registerTask('default', ['sass:development', 'copy:development', 'jade']);
 
 };
