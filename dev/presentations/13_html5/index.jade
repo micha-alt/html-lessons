@@ -1,10 +1,70 @@
 extends ../../layout/presentations
 
 block title
-    title Geschichte der Auszeichnungsprachen
+    title HTML5 - HTML Schulung
 
 block content
-    #Start.pikSlide
-        h2 Markup Languages
+    .pikSlide.center
+        h2 Überblick Spezifikationen
+        div.link
+            span Link:
+            a(href='http://www.whatwg.org/specs/web-apps/current-work/',target='_blank') whatwg.org
+        img(src='/img/html5.png')
     .pikSlide
-        h2 SGML
+        h2 Infografiken / Resources
+        ul
+            li: a(href='http://cdn.dotcominfoway.com/images/html5-infographics.jpg') dotcominfoway.com
+            li: a(href='http://thumbnails.visually.netdna-cdn.com/wtf-is-html5-and-why-should-we-all-care_50535988df44e.jpg') WTF
+            li: a(href='http://visually.visually.netdna-cdn.com/TheHistoryofHTML5_4ffc89a1614e6_w650.jpg') History
+            li: a(href='http://thumbnails.visually.netdna-cdn.com/html5-why-developers-need-it_504bfbc9cc91e.jpg') Browser Support
+            li: a(href='http://sixrevisions.com/html/the-only-html5-resources-you-need-for-getting-up-to-speed/') Resources
+            li: a(href='https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5') developer.mozilla.org
+    .pikSlide
+        h2 Markup: Semantic Tags
+        div.link
+            span Link:
+            a(href='http://dev.w3.org/html5/html-author/',target='_blank') w3.org
+        ul
+            li header, footer, main
+            li article, section, aside
+            li nav
+            li figure, details
+            li mark, rt, output
+    .pikSlide
+        h2 Markup: Form Features
+        div.link
+            span Link:
+            a(href='http://docs.webplatform.org/wiki/guides/html5_form_features',target='_blank') webplatform.org
+        ul
+            li input types: number, range, date, color
+            li datalist
+            li output, progress, meter
+            li validation: required, pattern, min, max
+            li autofocus, placeholder
+    .pikSlide
+        h2 Markup: Medien
+        div.link
+            span Link:
+            a(href='https://developer.mozilla.org/en-US/docs/Web/HTML/Using_HTML5_audio_and_video',target='_blank') developer.mozilla.org
+        ul
+            li video
+            li audio
+            li APIs zur Steuerung
+    .pikSlide
+        h2 W3C Browser APIs
+        ul
+            li Offline Support: Application Cache
+            li Editierbarkeit: contenteditable
+            li Drag&Drop: draggable
+            li Location und History
+            li Geolocation
+    .pikSlide
+        h2 WHATWG APIs
+        ul
+            li Messaging
+            li Bitmap API (2D)
+            li WebGL (3D)
+            li Background Threads: Worker
+            li Storage: local and session
+            li Client-Server: WebSockets
+            li Server-To-Client: EventSource
