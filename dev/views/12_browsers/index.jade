@@ -1,12 +1,18 @@
 extends ../../layout/base
 
 block title
-    title Geschichte der Auszeichnunssprachen - HTML Schulung
+    title Browser-Unterstützung - HTML Schulung
 
 block main
     section#intro
         .splash
-            h2 Geschichte
-            p Entwicklung der Auszeichungssprachen
+            h2 Browser-Unterstützung
+            p
+                | Die Zahl der Browser, die unterstützt werden sollten/müssen ist in den letzten
+                | Jahren nicht geringer geworden. Eigentlich hat sich die Diversität sogar noch
+                | gesteigert.
+            p
+                | Im modernen Web-Design gelten Browser-Weichen allerdings als veraltet; Feature
+                | detection ist das neue Mittel der Wahl. (Webkit ist nicht Webkit!)
     #presentation.full-width.row
-        iframe(src='/pik7/presenter.html',seamless='',data-presentation='02_history')
+        iframe(src='/pik7/presenter.html',seamless='',data-presentation='12_browsers')

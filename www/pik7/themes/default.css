@@ -238,7 +238,8 @@
     }
 
     ul ul, ol ul, ul ol, ol ol {
-        margin-left: 1em
+        margin-left: 1em;
+        font-size: .5em;
     }
 
     ul ul, ol ol, ul ol, ol ul, li {
@@ -247,7 +248,8 @@
     }
 
     table {
-        border-collapse: collapse
+        border-collapse: collapse;
+        font-size: 24px;
     }
 
     table.center {
@@ -266,7 +268,9 @@
     table:not(.noborder) tr:first-child th {
         border-bottom: .1em solid #444
     }
-
+    table:not(.noborder) tr td {
+        border-bottom: 1px solid #444;
+    }
     tr:not(:first-child) th:first-child {
         text-align: right
     }

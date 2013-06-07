@@ -1,10 +1,59 @@
 extends ../../layout/presentations
 
 block title
-    title Geschichte der Auszeichnungsprachen
+    title Browser-Unterstützung
 
 block content
-    #Start.pikSlide
-        h2 Markup Languages
     .pikSlide
-        h2 SGML
+        h2 Markübersicht Browser
+        table
+            tr
+                th Hersteller/Browser
+                th Render Engine
+                th Anmerkung
+            tr
+                td Google Chrome
+                td Webkit
+                td neue Engine <code>Blink</code> ab Chrome 28
+            tr
+                td Microsoft IE
+                td Trident
+                td HTML5 ab IE10
+            tr
+                td Mozilla Firefox
+                td Gecko
+                td neue Engine <code>Servo</code>, Zeitpunkt unbekannt
+            tr
+                td Apple Safari
+                td Webkit
+                td
+    .pikSlide
+        h2 Unterschiede
+        ul
+            li Layout beim Rendern (Box Model)
+            li CSS Unterstützung
+            li DOM API
+            li Event-Handling
+    .pikSlide
+        h2 Lösungen
+        ul.small
+            li Layout Resets
+                ul
+                    li: a(href='http://meyerweb.com/eric/tools/css/reset/') Eric Meier's Reset
+                    li: a(href='http://necolas.github.io/normalize.css/') Normalize.css
+            li Polyfills
+                ul
+                    li: a(href='https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills') Cross Browser List
+                    li: a(href='https://github.com/aFarkas/html5shiv/') HTML5 Shim/Shiv
+            li JavaScript Bibliotheken
+                ul
+                    li: a(href='http://jquery.com/') jQuery
+            li Feature Tests
+                ul
+                    li: a(href='http://modernizr.com/') modernizr.com
+    .pikSlide
+        h2 Hilfen im Netz
+        ul
+            li: a(href='http://www.quirksmode.org/') quirksmode.org
+            li: a(href='http://caniuse.com/') Can I Use.com
+            li: a(href='http://html5please.com/') html5please.com

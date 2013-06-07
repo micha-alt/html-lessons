@@ -3,14 +3,82 @@
   <head>
     <script src="/pik7/core/pik7.js"></script>
     <meta charset="utf-8">
-    <title>Geschichte der Auszeichnungsprachen</title>
+    <title>Browser-Unterstützung</title>
   </head>
   <body>
-    <div id="Start" class="pikSlide">
-      <h2>Markup Languages</h2>
+    <div class="pikSlide">
+      <h2>Markübersicht Browser</h2>
+      <table>
+        <tr>
+          <th>Hersteller/Browser</th>
+          <th>Render Engine</th>
+          <th>Anmerkung</th>
+        </tr>
+        <tr>
+          <td>Google Chrome</td>
+          <td>Webkit</td>
+          <td>neue Engine <code>Blink</code> ab Chrome 28</td>
+        </tr>
+        <tr>
+          <td>Microsoft IE</td>
+          <td>Trident</td>
+          <td>HTML5 ab IE10</td>
+        </tr>
+        <tr>
+          <td>Mozilla Firefox</td>
+          <td>Gecko</td>
+          <td>neue Engine <code>Servo</code>, Zeitpunkt unbekannt</td>
+        </tr>
+        <tr>
+          <td>Apple Safari</td>
+          <td>Webkit</td>
+          <td></td>
+        </tr>
+      </table>
     </div>
     <div class="pikSlide">
-      <h2>SGML</h2>
+      <h2>Unterschiede</h2>
+      <ul>
+        <li>Layout beim Rendern (Box Model)</li>
+        <li>CSS Unterstützung</li>
+        <li>DOM API</li>
+        <li>Event-Handling</li>
+      </ul>
+    </div>
+    <div class="pikSlide">
+      <h2>Lösungen</h2>
+      <ul class="small">
+        <li>Layout Resets
+          <ul>
+            <li><a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meier's Reset</a></li>
+            <li><a href="http://necolas.github.io/normalize.css/">Normalize.css</a></li>
+          </ul>
+        </li>
+        <li>Polyfills
+          <ul>
+            <li><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">Cross Browser List</a></li>
+            <li><a href="https://github.com/aFarkas/html5shiv/">HTML5 Shim/Shiv</a></li>
+          </ul>
+        </li>
+        <li>JavaScript Bibliotheken
+          <ul>
+            <li><a href="http://jquery.com/">jQuery</a></li>
+          </ul>
+        </li>
+        <li>Feature Tests
+          <ul>
+            <li><a href="http://modernizr.com/">modernizr.com</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="pikSlide">
+      <h2>Hilfen im Netz</h2>
+      <ul>
+        <li><a href="http://www.quirksmode.org/">quirksmode.org</a></li>
+        <li><a href="http://caniuse.com/">Can I Use.com</a></li>
+        <li><a href="http://html5please.com/">html5please.com</a></li>
+      </ul>
     </div>
   </body>
 </html>
