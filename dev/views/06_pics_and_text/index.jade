@@ -1,12 +1,17 @@
 extends ../../layout/base
 
 block title
-    title Geschichte der Auszeichnunssprachen - HTML Schulung
+    title Grafiken einbinden - HTML Schulung
 
 block main
     section#intro
         .splash
-            h2 Geschichte
-            p Entwicklung der Auszeichungssprachen
-    #presentation.full-width.row
-        iframe(src='/pik7/presenter.html',seamless='',data-presentation='02_history')
+            h2 Grafiken einbinden
+            p Image-Tag und Textfluss
+    p
+        | Die Einbindung erfolgt ganz einfach über den Image-Tag und sein src-Attribut.
+        | Der img-Tag ist ein inline-Tag, erzwingt also keinen Zeilenwechsel. Er lässt
+        | sich rudimentär über CSS stylen. Die meißten Bildformate haben eine "intrinsic size".
+        | Alternativ lässt sich aber auch eine Größe angeben (Attribute oder css).
+        | Tutorial:&nbsp;
+        a(href='http://css.maxdesign.com.au/floatutorial/') maxdesign.com.au

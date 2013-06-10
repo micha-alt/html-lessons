@@ -5,7 +5,7 @@ block title
 
 block content
     .pikSlide
-        h2 Aufbau eines HTML-Dokumentes
+        h2 Beispiel eines HTML-Dokumentes
         pre
             | &lt;!DOCTYPE html&gt;
             | &lt;html&gt;
@@ -19,4 +19,49 @@ block content
             |   &lt;/body&gt;
             | &lt;/html&gt;
     .pikSlide
+        h2 Elemente/Tags
+        p
+            | HTML-Dokumente bestehen aus Text, der in Tags zur Auszeichnung eingeschlossen ist.
+            | Der Tag beginnt mit einem "Kleiner-Als"-Zeichen &lt; und endet mit dem "Größer-Als" &gt;
+            | Der Tagname darf keine Leerzeichen enthalten. Das Schliessen des Tags geschieht durch
+            | einen Endtag &lt;/tagname&gt
+        pre
+            | &lt;p&gt;Beispieltext&lt;/p&gt;
+    .pikSlide
+        h2 Leere Elemente/Tags
+        p
+            | HTML definiert auch Tags, die keinen eigentlichten Content/Inhalt haben. Beispiel: img
+            | Ein solcher Tag kann auch "offen" gelassen werden. Oder als leeres Element ausgezeichnet
+            | werden.
+        pre
+            | &lt;img&gt;
+            | &lt;img&gt;&lt;/img&gt;
+            | &lt;img /&gt;
+    .pikSlide
+        h2 Attribute
+        p
+            | Ein Tag kann zusätzliche Informationen in sogenannten Attributen bereitstellen.
+            | Der Attribut-Wert ist (nicht zwingend) in Hochkommata oder Anführungszeichen
+            | einzuschließen
+        pre
+            | &lt;img src="sample.jpg"&gt;
+    .pikSlide
+        h2 Sonstiges
+        ul
+            li: a(href='http://www.w3.org/TR/2011/WD-html5-20110113/named-character-references.html') Named Character References
+            li Kommentar
+                pre &lt;!-- Das ist HTML Kommentar --&gt
+    .pikSlide
+        h2 Aufbau
+        ul
+            li Doctype-Definition (HTML-Version)
+            li Wurzel-Element: html
+            li head-Bereich (Titel und Metadaten)&nbsp;
+                a(href='http://docs.webplatform.org/wiki/guides/the_html_head') webplatform.org
+            li body-Bereich (Dokument selbst)
+    .pikSlide
         h2 Doctypes?
+            li HTML4
+            li HTML5
+            li XHTML
+            li: a(href='http://docs.webplatform.org/wiki/guides/doctypes_and_markup_styles') webplatform.org

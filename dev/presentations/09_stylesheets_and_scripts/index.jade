@@ -1,10 +1,26 @@
 extends ../../layout/presentations
 
 block title
-    title Geschichte der Auszeichnungsprachen
+    title Einbindung CSS/JavaScript
 
 block content
-    #Start.pikSlide
-        h2 Markup Languages
     .pikSlide
-        h2 SGML
+        h2 CSS
+        ul
+            li im style-Attribut&nbsp;
+                pre &lt;p style="color: red;"&gt;Roter Text&lt;/p&gt;
+            li Inline-Styles im style-Tag im Head-Bereich
+                pre
+                    | &lt;style&gt;
+                    | body {
+                    |   margin: 0;
+                    | }
+                    | &lt;style&gt;
+            li link-Verknüpfung im Head-Bereich
+                pre &lt;link rel="stylesheet" src="styles.css"&gt;
+    .pikSlide
+        h2 JavaScript
+        ul
+            li als Eventhandler in den Event-Attributen
+            li Innerhalb eines script-Tags
+            li Als externes Script über einen Script-Tag
